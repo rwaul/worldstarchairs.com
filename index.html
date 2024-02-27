@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Star Chairs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to World Star Chairs</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section>
+        <h2>About Us</h2>
+        <p>Welcome to World Star Chairs, your one-stop destination for high-quality chairs from around the world.</p>
+    </section>
+    <section>
+        <h2>Connect with Us</h2>
+        <button onclick="window.open('https://youtube.com/@rwaul', '_blank')">YouTube Channel</button>
+        <button onclick="copyToClipboard('@rwaul')">Copy Discord ID</button>
+        <button onclick="window.location.href='https://discord.gg/worldstarchairs'">Join Discord</button>
+    </section>
+    <footer>
+        &copy; 2024 World Star Chairs. All rights reserved.
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            var textField = document.createElement('textarea');
+            textField.innerText = text;
+            document.body.appendChild(textField);
+            textField.select();
+            document.execCommand('copy');
+            textField.remove();
+            alert('Discord ID copied to clipboard: ' + text);
+        }
+    </script>
+</body>
+</html>
